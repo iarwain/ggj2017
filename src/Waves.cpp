@@ -59,7 +59,7 @@ public:
         PushConfigSection();
 
         // Can be moved?
-        if(orxConfig_GetBool("Moveable") != orxFALSE)
+        if(orxConfig_GetBool("Movable") != orxFALSE)
         {
           ScrollObject *poCursor;
 
