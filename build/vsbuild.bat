@@ -5,8 +5,8 @@ REM Generates solution
 REM premake4 vs2015
 
 REM Builds Debug & Release
-msbuild windows\vs2015\Waves.sln /p:Configuration=Debug
-msbuild windows\vs2015\Waves.sln /p:Configuration=Release
+msbuild windows\vs2015\Waves.sln /p:Configuration=Debug /p:Platform=x64
+msbuild windows\vs2015\Waves.sln /p:Configuration=Release /p:Platform=x64
 
 REM Commits changes
 hg commit -m "- Windows automated build"

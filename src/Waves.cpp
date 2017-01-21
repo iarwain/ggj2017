@@ -14,12 +14,89 @@
 
 //! Structs/Classes
 
+//! Source
+class Source : public ScrollObject
+{
+public:
+
+  void OnCreate()
+  {
+    bIsActive   = orxFALSE;
+    bIsSelected = orxFALSE;
+  }
+
+  void OnDelete()
+  {
+  }
+
+  void Update(const orxCLOCK_INFO &_rstInfo)
+  {
+    ScrollObject *poSource;
+
+    Waves &roGame = Waves::GetInstance();
+
+    // Gets object
+    poSource = roGame.GetRunTimeObject("Source");
+
+    // Selected?
+    if(poSource == this)
+    {
+      // Picked?
+      if(bIsSelected == orxFALSE)
+      {
+        ScrollObject *poCursor;
+
+        // Updates status
+        bIsActive   = orxFALSE;
+        bIsSelected = orxTRUE;
+
+        // Gets Cursor
+        poCursor = roGame.GetRunTimeObject("Cursor");
+
+        // Valid?
+        if(poCursor != orxNULL)
+        {
+          // Attaches source to it
+          orxObject_Attach(GetOrxObject(), poCursor->GetOrxObject());
+        }
+      }
+    }
+    else
+    {
+      // Dropped?
+      if(bIsSelected != orxFALSE)
+      {
+        // Updates status
+        bIsActive   = orxTRUE;
+        bIsSelected = orxFALSE;
+
+        // Detaches source from cursor
+        orxObject_Attach(GetOrxObject(), orxNULL);
+      }
+    }
+  }
+
+  orxBOOL bIsActive;
+  orxBOOL bIsSelected;
+};
+
 
 //! Code
 static orxBOOL orxFASTCALL SaveCallback(const orxSTRING _zSectionName, const orxSTRING _zKeyName, const orxSTRING _zFileName, orxBOOL _bUseEncryption)
 {
   //! Done!
   return (orxString_Compare(_zSectionName, "Save") == 0) ? orxTRUE : orxFALSE;
+}
+
+ScrollObject *Waves::GetInteractionObject() const
+{
+  ScrollObject *poResult;
+
+  // Updates result
+  poResult = GetObject(mu64InteractionID);
+
+  // Done!
+  return poResult;
 }
 
 orxSTATUS Waves::Load()
@@ -98,6 +175,23 @@ void Waves::DeleteRunTimeObject(const orxSTRING _zObjectName)
 
   // Pops config section
   orxConfig_PopSection();
+}
+
+ScrollObject *Waves::GetRunTimeObject(const orxSTRING _zObjectName) const
+{
+  ScrollObject *poResult;
+
+  // Pushes runtime section
+  orxConfig_PushSection("RunTime");
+
+  // Gets object
+  poResult = GetObject(orxConfig_GetU64(_zObjectName));
+
+  // Pops config section
+  orxConfig_PopSection();
+
+  // Done
+  return poResult;
 }
 
 orxSTATUS Waves::Bootstrap() const
@@ -382,6 +476,8 @@ void Waves::Exit()
 
 void Waves::BindObjects()
 {
+  // Binds objects
+  ScrollBindObject<Source>("O-Source");
 }
 
 orxSTATUS orxFASTCALL Waves::EventHandler(const orxEVENT *_pstEvent)
