@@ -1,9 +1,0 @@
-[00_Tutorial_1]
-Img = 00_Tutorial_1.png
-SourceList = 00_Tutorial_1_Pattern_1
-BloqueurList = 
-
-[00_Tutorial_1_Pattern_1]
-Pattern = 1
-Img = 00_Tutorial_1_Pattern_1.png
-Position = (960 , 540, 0)
