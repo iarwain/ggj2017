@@ -1,6 +1,9 @@
 syntax: glob
 .DS_Store
 *.sublime-workspace
-build/mac/gmake/obj
 *.log
 *.cih
+**/obj/
+*.pdb
+*.idb
+*.ilk
