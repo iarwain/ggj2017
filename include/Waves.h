@@ -32,11 +32,14 @@ public:
 
                 orxDOUBLE       GetTime() const             {return mdTime;}
                 GameState       GetGameState() const        {return meGameState;}
+                ScrollObject *  GetInteractionObject() const;
+                const orxVECTOR &GetMousePosition() const   {return mvMousePosition;}
 
                 orxSTATUS       Load();
                 orxSTATUS       Save();
 
                 void            DeleteRunTimeObject(const orxSTRING _zObjectName);
+                ScrollObject *  GetRunTimeObject(const orxSTRING _zObjectName) const;
 
 
 private:
