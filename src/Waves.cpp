@@ -44,21 +44,31 @@ public:
       // Picked?
       if(bIsSelected == orxFALSE)
       {
-        ScrollObject *poCursor;
-
         // Updates status
         bIsActive   = orxFALSE;
         bIsSelected = orxTRUE;
 
-        // Gets Cursor
-        poCursor = roGame.GetRunTimeObject("Cursor");
+        // Pushes config section
+        PushConfigSection();
 
-        // Valid?
-        if(poCursor != orxNULL)
+        // Can be moved?
+        if(orxConfig_GetBool("Moveable") != orxFALSE)
         {
-          // Attaches source to it
-          orxObject_Attach(GetOrxObject(), poCursor->GetOrxObject());
+          ScrollObject *poCursor;
+
+          // Gets Cursor
+          poCursor = roGame.GetRunTimeObject("Cursor");
+
+          // Valid?
+          if(poCursor != orxNULL)
+          {
+            // Attaches source to it
+            orxObject_Attach(GetOrxObject(), poCursor->GetOrxObject());
+          }
         }
+
+        // Pops config section
+        PopConfigSection();
       }
     }
     else
@@ -318,8 +328,14 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
       pstShader != orxNULL;
       pstShader = orxSHADER(orxStructure_GetNext(pstShader)))
   {
+    orxVECTOR vRes = {};
+
     // Updates its time
     orxShader_SetFloatParam(pstShader, "Time", 0, &_rstInfo.fTime);
+
+    // Updates its Res
+    orxDisplay_GetScreenSize(&vRes.fX, &vRes.fY);
+    orxShader_SetVectorParam(pstShader, "Res", 0, &vRes);
   }
 }
 
