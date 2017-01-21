@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{31197FF6-CD51-A041-BDBE-DF59EF711E4A}</ProjectGuid>
+    <ProjectGuid>{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}</ProjectGuid>
     <RootNamespace>Waves</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>

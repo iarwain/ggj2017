@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Waves", "Waves.vcxproj", "{31197FF6-CD51-A041-BDBE-DF59EF711E4A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Waves", "Waves.vcxproj", "{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Debug|x64.ActiveCfg = Debug|x64
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Debug|x64.Build.0 = Debug|x64
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Debug|Win32.Build.0 = Debug|Win32
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Release|x64.ActiveCfg = Release|x64
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Release|x64.Build.0 = Release|x64
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Release|Win32.ActiveCfg = Release|Win32
-		{31197FF6-CD51-A041-BDBE-DF59EF711E4A}.Release|Win32.Build.0 = Release|Win32
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Debug|x64.ActiveCfg = Debug|x64
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Debug|x64.Build.0 = Debug|x64
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Debug|Win32.ActiveCfg = Debug|Win32
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Debug|Win32.Build.0 = Debug|Win32
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Release|x64.ActiveCfg = Release|x64
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Release|x64.Build.0 = Release|x64
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Release|Win32.ActiveCfg = Release|Win32
+		{39E08E5B-BDA4-D345-9FBD-3D4F512F1095}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
