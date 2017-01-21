@@ -346,6 +346,28 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
     // Updates its Res
     orxDisplay_GetScreenSize(&vRes.fX, &vRes.fY);
     orxShader_SetVectorParam(pstShader, "Res", 0, &vRes);
+
+    // Level?
+    if(!orxString_Compare(orxShader_GetName(pstShader), "S-Level"))
+    {
+      orxU32 sourceIndex[4] = {};
+
+      for(Source *poSource = GetNextObject<Source>();
+          poSource;
+          poSource = GetNextObject<Source>(poSource))
+      {
+        orxU32 u32ID;
+
+        // Pushes its section
+        poSource->PushConfigSection();
+
+        // Gets its ID
+        u32ID = orxConfig_GetU32("ID");
+
+        // Pops config section
+        poSource->PopConfigSection();
+      }
+    }
   }
 }
 
