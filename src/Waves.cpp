@@ -23,10 +23,17 @@ public:
   {
     bIsActive   = orxFALSE;
     bIsSelected = orxFALSE;
+    u32Count++;
   }
 
   void OnDelete()
   {
+    u32Count--;
+  }
+
+  orxBOOL OnRender(orxRENDER_EVENT_PAYLOAD *_pstPayload)
+  {
+    return orxTRUE;
   }
 
   void Update(const orxCLOCK_INFO &_rstInfo)
@@ -88,7 +95,10 @@ public:
 
   orxBOOL bIsActive;
   orxBOOL bIsSelected;
+  static orxU32 u32Count;
 };
+
+orxU32 Source::u32Count;
 
 
 //! Code
@@ -437,6 +447,7 @@ orxSTATUS Waves::Init()
   meGameState       = GameStateSplash;
   mu64InteractionID = 0;
   mdTime            = orx2D(0.0);
+  Source::u32Count  = 0;
   orxVector_Copy(&mvMousePosition, &orxVECTOR_0);
 
   // Loads config
