@@ -1,0 +1,40 @@
+{
+  "folders":
+  [
+    {
+      "follow_symlinks": true,
+      "path": "../src"
+    },
+    {
+      "follow_symlinks": true,
+      "path": "../include"
+    },
+    {
+      "follow_symlinks": true,
+      "path": "../data"
+    },
+    {
+      "file_exclude_patterns":
+      [
+        "*.log",
+        "*.exe",
+        "*.dll",
+        "*.ilk",
+        "*.",
+        "*.dylib",
+        "*.so"
+      ],
+      "follow_symlinks": true,
+      "path": "../bin"
+    },
+    {
+      "folder_exclude_patterns":
+      [
+        "vs20*",
+        "mac"
+      ],
+      "follow_symlinks": true,
+      "path": "../build"
+    }
+  ]
+}
