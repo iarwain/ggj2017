@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{DD5D2DCA-F2AA-4C46-9E4C-EA18E671C12F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{A724DF5E-1060-0544-B500-B0CBBB7D9298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll">
+      <UniqueIdentifier>{EBA60F24-4781-7247-8DA4-BA7770CDFC8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx">
+      <UniqueIdentifier>{50BA0678-F73D-B64F-91B9-DD4A9EB067BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\anim">
+      <UniqueIdentifier>{5ACC3894-AB22-B640-87BD-A54659475A32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\base">
+      <UniqueIdentifier>{54C9CB05-A350-FE46-ABB1-F7A054473FA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\core">
+      <UniqueIdentifier>{A9D60D1E-95D8-0E4E-ABAE-CB7780E34CC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\debug">
+      <UniqueIdentifier>{3374C4BA-859F-6942-8CA9-D9E6C4BD75DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\display">
+      <UniqueIdentifier>{DCC8CA89-818B-B945-9098-5A3EB641841F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\io">
+      <UniqueIdentifier>{53A3EB9B-1AE5-EC4F-882C-CFFA191C5E61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\main">
+      <UniqueIdentifier>{1AFC5BCD-C671-9745-8E6B-B6F8C089CF56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\math">
+      <UniqueIdentifier>{8A5F4E04-12A5-E34D-84A7-DDF4975C394B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\memory">
+      <UniqueIdentifier>{55810BD6-DFA8-5A46-8580-45BEC456573D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\object">
+      <UniqueIdentifier>{27913E2E-1A53-0441-839C-23A98D113A97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\physics">
+      <UniqueIdentifier>{265A818F-57B7-6947-8304-9BF3A2EAC6A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\plugin">
+      <UniqueIdentifier>{9DC6480F-DAC1-454A-9200-ED409645A149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\plugin\define">
+      <UniqueIdentifier>{BD3C0D23-A4F7-804C-8DE8-8BAE76EE6330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\render">
+      <UniqueIdentifier>{F49AD04A-E8E0-204E-B707-7D7D730E449B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\sound">
+      <UniqueIdentifier>{4E12A10E-95DC-3443-BECE-F5B82D9E811B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Scroll\orx\utils">
+      <UniqueIdentifier>{F26F9E6F-68E0-A647-B33E-14149339AC1D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{310617D4-ACC5-C54E-9A15-4D97DCAC0F6E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\resource">
+      <UniqueIdentifier>{461A80F0-D373-E64F-954A-CA3DA347FD68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\Waves.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\Scroll.h">
+      <Filter>include\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\ScrollBase.h">
+      <Filter>include\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\ScrollEd.h">
+      <Filter>include\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\ScrollObject.h">
+      <Filter>include\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\orx.h">
+      <Filter>include\Scroll\orx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\orxInclude.h">
+      <Filter>include\Scroll\orx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\orxKernel.h">
+      <Filter>include\Scroll\orx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\orxPluginAPI.h">
+      <Filter>include\Scroll\orx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\orxUtils.h">
+      <Filter>include\Scroll\orx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\anim\orxAnim.h">
+      <Filter>include\Scroll\orx\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\anim\orxAnimPointer.h">
+      <Filter>include\Scroll\orx\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\anim\orxAnimSet.h">
+      <Filter>include\Scroll\orx\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\base\orxBuild.h">
+      <Filter>include\Scroll\orx\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\base\orxDecl.h">
+      <Filter>include\Scroll\orx\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\base\orxModule.h">
+      <Filter>include\Scroll\orx\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\base\orxType.h">
+      <Filter>include\Scroll\orx\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\base\orxVersion.h">
+      <Filter>include\Scroll\orx\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxClock.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxCommand.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxConfig.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxConsole.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxEvent.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxLocale.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxResource.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxSystem.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\core\orxThread.h">
+      <Filter>include\Scroll\orx\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\debug\orxDebug.h">
+      <Filter>include\Scroll\orx\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\debug\orxFPS.h">
+      <Filter>include\Scroll\orx\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\debug\orxProfiler.h">
+      <Filter>include\Scroll\orx\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxDisplay.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxFont.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxGraphic.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxScreenshot.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxText.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\display\orxTexture.h">
+      <Filter>include\Scroll\orx\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\io\orxFile.h">
+      <Filter>include\Scroll\orx\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\io\orxInput.h">
+      <Filter>include\Scroll\orx\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\io\orxJoystick.h">
+      <Filter>include\Scroll\orx\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\io\orxKeyboard.h">
+      <Filter>include\Scroll\orx\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\io\orxMouse.h">
+      <Filter>include\Scroll\orx\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\main\orxAndroid.h">
+      <Filter>include\Scroll\orx\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\main\orxParam.h">
+      <Filter>include\Scroll\orx\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\math\orxAABox.h">
+      <Filter>include\Scroll\orx\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\math\orxMath.h">
+      <Filter>include\Scroll\orx\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\math\orxOBox.h">
+      <Filter>include\Scroll\orx\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\math\orxVector.h">
+      <Filter>include\Scroll\orx\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\memory\orxBank.h">
+      <Filter>include\Scroll\orx\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\memory\orxMemory.h">
+      <Filter>include\Scroll\orx\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxFrame.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxFX.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxFXPointer.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxObject.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxSpawner.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxStructure.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\object\orxTimeLine.h">
+      <Filter>include\Scroll\orx\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\physics\orxBody.h">
+      <Filter>include\Scroll\orx\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\physics\orxPhysics.h">
+      <Filter>include\Scroll\orx\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\orxPlugin.h">
+      <Filter>include\Scroll\orx\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\orxPluginCore.h">
+      <Filter>include\Scroll\orx\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\orxPluginType.h">
+      <Filter>include\Scroll\orx\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\orxPluginUser.h">
+      <Filter>include\Scroll\orx\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_CoreDefine.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_CoreID.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Display.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Joystick.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Keyboard.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Mouse.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Physics.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_Render.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\plugin\define\orxPlugin_SoundSystem.h">
+      <Filter>include\Scroll\orx\plugin\define</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\render\orxCamera.h">
+      <Filter>include\Scroll\orx\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\render\orxRender.h">
+      <Filter>include\Scroll\orx\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\render\orxShader.h">
+      <Filter>include\Scroll\orx\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\render\orxShaderPointer.h">
+      <Filter>include\Scroll\orx\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\render\orxViewport.h">
+      <Filter>include\Scroll\orx\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\sound\orxSound.h">
+      <Filter>include\Scroll\orx\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\sound\orxSoundPointer.h">
+      <Filter>include\Scroll\orx\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\sound\orxSoundSystem.h">
+      <Filter>include\Scroll\orx\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\utils\orxHashTable.h">
+      <Filter>include\Scroll\orx\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\utils\orxLinkList.h">
+      <Filter>include\Scroll\orx\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\utils\orxString.h">
+      <Filter>include\Scroll\orx\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\Scroll\orx\utils\orxTree.h">
+      <Filter>include\Scroll\orx\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\Waves.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\data\resource\waves.rc">
+      <Filter>data\resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
