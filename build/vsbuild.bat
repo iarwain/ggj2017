@@ -1,15 +1,15 @@
-# Inits environment
+REM Inits environment
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"
 
-# Generates solution
-premake4 vs2015
+REM Generates solution
+REM premake4 vs2015
 
-# Builds Debug & Release
+REM Builds Debug & Release
 msbuild windows\vs2015\Waves.sln /p:Configuration=Debug
 msbuild windows\vs2015\Waves.sln /p:Configuration=Release
 
-# Commits changes
+REM Commits changes
 hg commit -m "- Windows automated build"
 
-# Pushes them
+REM Pushes them
 hg push
