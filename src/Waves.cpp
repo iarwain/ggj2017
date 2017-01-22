@@ -401,6 +401,45 @@ void Waves::UpdateGame(const orxCLOCK_INFO &_rstInfo)
 
   // Updates input
   UpdateInput(_rstInfo);
+
+  // Success?
+  if(orxInput_IsActive("Success") && orxInput_HasNewStatus("Success"))
+  {
+    orxU32 u32Level;
+
+    // Pushes save section
+    orxConfig_PushSection("Save");
+
+    // Gets next level
+    u32Level = orxConfig_GetU32("CurrentLevel") + 1;
+
+    // Pushes game section
+    orxConfig_PushSection("Game");
+
+    // Wraps
+    if(u32Level >= (orxU32)orxConfig_GetListCounter("LevelList"))
+    {
+      u32Level = 0;
+    }
+
+    // Deletes current level
+    DeleteRunTimeObject("Level");
+
+    // Creates new level
+    CreateObject(orxConfig_GetListString("LevelList", u32Level));
+
+    // Pops config section
+    orxConfig_PopSection();
+
+    // Sets it
+    orxConfig_SetU32("CurrentLevel", u32Level);
+
+    // Pops config section
+    orxConfig_PopSection();
+
+    // Saves
+    Save();
+  }
 }
 
 void Waves::UpdatePause(const orxCLOCK_INFO &_rstInfo)
@@ -454,6 +493,23 @@ void Waves::Update(const orxCLOCK_INFO &_rstInfo)
       // Leaving state?
       if(meGameState != GameStateMenu)
       {
+        orxU32 u32Level;
+
+        // Updates state
+        meGameState = GameStateRun;
+
+        // Pushes save section
+        orxConfig_PushSection("Save");
+
+        // Gets current level
+        u32Level = orxConfig_GetU32("CurrentLevel");
+
+        // Pops config section
+        orxConfig_PopSection();
+
+        // Creates level
+        CreateObject(orxConfig_GetListString("LevelList", u32Level));
+
         // Deletes main menu
         DeleteRunTimeObject("MainMenu");
       }
