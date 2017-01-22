@@ -350,7 +350,9 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
     // Level?
     if(!orxString_Compare(orxShader_GetName(pstShader), "S-Level"))
     {
-      orxU32 sourceIndex[4] = {};
+      orxVECTOR avSourceList[4] = {};
+      orxVECTOR avSourceColorList[4] = {};
+      orxFLOAT  afSourceRadiusList[4] = {};
 
       for(Source *poSource = GetNextObject<Source>();
           poSource;
@@ -364,9 +366,30 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
         // Gets its ID
         u32ID = orxConfig_GetU32("ID");
 
+        // Gets its position
+        poSource->GetPosition(avSourceList[u32ID]);
+        avSourceList[u32ID].fX /= 1920.f;
+        avSourceList[u32ID].fY /= 1080.f;
+
+        // Gets its tint
+        orxConfig_GetVector("Tint", &avSourceColorList[u32ID]);
+
+        // Gets its radius
+        afSourceRadiusList[u32ID] = orxConfig_GetFloat("Radius");
+
         // Pops config section
         poSource->PopConfigSection();
       }
+
+      // Updates shader parameters
+      orxShader_SetVectorParam(pstShader, "SourceList", 4, avSourceList);
+      orxShader_SetVectorParam(pstShader, "SourceColorList", 4, avSourceColorList);
+      orxShader_SetFloatParam(pstShader, "SourceRadiusList", 4, afSourceRadiusList);
+
+      // for(orxU32 i = 0; i < 4; i++)
+      // {
+      //   orxLOG("Source%d: At (%f, %f) Col (%f, %f, %f) Rad %f", i, avSourceList[i].fX, avSourceList[i].fY, avSourceColorList[i].fR, avSourceColorList[i].fG, avSourceColorList[i].fB, afSourceRadiusList[i]);
+      // }
     }
   }
 }
