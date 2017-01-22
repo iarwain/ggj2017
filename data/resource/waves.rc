@@ -32,12 +32,12 @@ BEGIN
     BLOCK "040904E4"
     BEGIN
       VALUE "CompanyName", "QUB"
-      VALUE "FileDescription", "Waves"
+      VALUE "FileDescription", "Ripples"
       VALUE "FileVersion", "0.1"
-      VALUE "InternalName", "Waves"
+      VALUE "InternalName", "Ripples"
       VALUE "LegalCopyright", "QUB"
-      VALUE "OriginalFilename", "waves.exe"
-      VALUE "ProductName", "Waves"
+      VALUE "OriginalFilename", "ripples.exe"
+      VALUE "ProductName", "Ripples"
       VALUE "ProductVersion", "0.1"
     END
   END

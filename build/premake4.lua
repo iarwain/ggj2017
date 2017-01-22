@@ -186,7 +186,7 @@ project "Waves"
         "../src/**.cpp",
         "../include/**.h"
     }
-    targetname ("waves")
+    targetname ("ripples")
 
 
     configuration {"vs*"}
