@@ -350,46 +350,72 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
     // Level?
     if(!orxString_Compare(orxShader_GetName(pstShader), "S-Level"))
     {
+      ScrollObject *poLevel;
+
       orxVECTOR avSourceList[4] = {};
       orxVECTOR avSourceColorList[4] = {};
       orxFLOAT  afSourceRadiusList[4] = {};
+      orxTEXTURE *apoTextureList[4] = {};
 
-      for(Source *poSource = GetNextObject<Source>();
-          poSource;
-          poSource = GetNextObject<Source>(poSource))
+      // Gets level
+      poLevel = GetRunTimeObject("Level");
+
+      // Valid?
+      if(poLevel != orxNULL)
       {
-        orxU32 u32ID;
-
         // Pushes its section
-        poSource->PushConfigSection();
+        poLevel->PushConfigSection();
 
-        // Gets its ID
-        u32ID = orxConfig_GetU32("ID");
+        for(Source *poSource = GetNextObject<Source>();
+            poSource;
+            poSource = GetNextObject<Source>(poSource))
+        {
+          const orxSTRING zPattern;
+          orxU32 u32ID;
 
-        // Gets its position
-        poSource->GetPosition(avSourceList[u32ID], orxTRUE);
-        avSourceList[u32ID].fX /= 1920.f;
-        avSourceList[u32ID].fY /= 1080.f;
+          // Pushes its section
+          poSource->PushConfigSection();
 
-        // Gets its color
-        orxConfig_GetVector("Color", &avSourceColorList[u32ID]);
+          // Gets its ID
+          u32ID = orxConfig_GetU32("ID");
 
-        // Gets its radius
-        afSourceRadiusList[u32ID] = orxConfig_GetFloat("Radius");
+          // Gets its radius
+          afSourceRadiusList[u32ID] = orxConfig_GetFloat("Radius");
+
+          // Pops config section
+          poSource->PopConfigSection();
+
+          // Gets pattern
+          zPattern = orxConfig_GetListString("PatternList", u32ID);
+
+          // Pushes its section
+          orxConfig_PushSection(zPattern);
+
+          // Gets its position
+          poSource->GetPosition(avSourceList[u32ID], orxTRUE);
+          avSourceList[u32ID].fX /= 1920.f;
+          avSourceList[u32ID].fY /= 1080.f;
+
+          // Gets its color
+          orxConfig_GetVector("Color", &avSourceColorList[u32ID]);
+
+          // Gets its texture
+          apoTextureList[u32ID] = orxTexture_CreateFromFile(orxConfig_GetString("Texture"), orxTRUE);
+          orxTexture_Delete(apoTextureList[u32ID]);
+
+          // Pops config section
+          orxConfig_PopSection();
+        }
 
         // Pops config section
-        poSource->PopConfigSection();
+        poLevel->PopConfigSection();
       }
 
       // Updates shader parameters
       orxShader_SetVectorParam(pstShader, "SourceList", 4, avSourceList);
       orxShader_SetVectorParam(pstShader, "SourceColorList", 4, avSourceColorList);
       orxShader_SetFloatParam(pstShader, "SourceRadiusList", 4, afSourceRadiusList);
-
-      // for(orxU32 i = 0; i < 4; i++)
-      // {
-      //   orxLOG("Source%d: At (%f, %f) Col (%f, %f, %f) Rad %f", i, avSourceList[i].fX, avSourceList[i].fY, avSourceColorList[i].fR, avSourceColorList[i].fG, avSourceColorList[i].fB, afSourceRadiusList[i]);
-      // }
+      orxShader_SetTextureParam(pstShader, "PatternList", 4, (const orxTEXTURE **)apoTextureList);
     }
   }
 }
