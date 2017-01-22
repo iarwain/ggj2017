@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4A94D04E-1A1C-6843-895D-090A65212FF4}</ProjectGuid>
+    <ProjectGuid>{404EA10C-2172-EA4A-98E1-BD33981B6FC3}</ProjectGuid>
     <RootNamespace>Waves</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -187,7 +187,7 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\include\Scroll;..\..\..\include\Scroll\orx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
@@ -223,7 +223,7 @@
       <AdditionalIncludeDirectories>..\..\..\include;..\..\..\include\Scroll;..\..\..\include\Scroll\orx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>

@@ -188,6 +188,9 @@ project "Waves"
     }
     targetname ("ripples")
 
+    configuration {"windows", "*Release*"}
+        kind ("WindowedApp")
+
 
     configuration {"vs*"}
         files {"../data/resource/**.rc"}

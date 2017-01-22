@@ -2,70 +2,70 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
-      <UniqueIdentifier>{3F99A15C-9498-F946-B570-A38D50863C41}</UniqueIdentifier>
+      <UniqueIdentifier>{2BD424CC-5715-C44D-82CA-146F19685FB4}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
-      <UniqueIdentifier>{69DED918-EC7F-AE4D-9674-40F809D9D7CE}</UniqueIdentifier>
+      <UniqueIdentifier>{B385AD84-CB0B-AE47-87E6-920BBD38256E}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll">
-      <UniqueIdentifier>{2F022DE4-41F0-6C45-AAF2-67EE63F123DF}</UniqueIdentifier>
+      <UniqueIdentifier>{9446EFB1-4E4E-5D4F-B2DF-C7748F86E0A4}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx">
-      <UniqueIdentifier>{40C8CDCB-6AEF-E84A-97A2-EBB4684821C7}</UniqueIdentifier>
+      <UniqueIdentifier>{B1884F31-D1D6-D349-A369-B322FDA354FB}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\anim">
-      <UniqueIdentifier>{082A97B7-E507-DC4F-8982-669D3E3E2CA6}</UniqueIdentifier>
+      <UniqueIdentifier>{F9F403AE-8279-0442-87B6-3C331B56B22B}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\base">
-      <UniqueIdentifier>{7CE5FAE1-CB3E-7F4B-B0BE-0D76201D46FF}</UniqueIdentifier>
+      <UniqueIdentifier>{AEEA372B-0643-6F44-B0C5-E0B11A716780}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\core">
-      <UniqueIdentifier>{2C297EB8-38A7-9942-97D4-8896D5D69885}</UniqueIdentifier>
+      <UniqueIdentifier>{63CEEA9B-F66A-CF4B-B5AC-AC42331C58BB}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\debug">
-      <UniqueIdentifier>{85A2AB1B-4D59-D34B-90D9-8A9CBCA160FE}</UniqueIdentifier>
+      <UniqueIdentifier>{45498088-C87D-1042-8A7E-6814A35475AF}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\display">
-      <UniqueIdentifier>{80301285-F406-3F4A-ABC2-EB005AD6465F}</UniqueIdentifier>
+      <UniqueIdentifier>{559B885F-6808-0E41-9ECF-44F66542B9B9}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\io">
-      <UniqueIdentifier>{E9C823E9-FAB1-B348-8B1E-8496587E649B}</UniqueIdentifier>
+      <UniqueIdentifier>{3F352A06-D60D-AC4B-90D1-F0F9CE32EB20}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\main">
-      <UniqueIdentifier>{9CE624B7-68AD-A343-B26F-750155AB518E}</UniqueIdentifier>
+      <UniqueIdentifier>{6C9C2C83-B304-7244-BC6C-835FE4268C8C}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\math">
-      <UniqueIdentifier>{5D089FD9-5A1A-AC46-8287-59C9D56FC804}</UniqueIdentifier>
+      <UniqueIdentifier>{FEAA8D1E-866F-A34A-AC23-7585CB1E6716}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\memory">
-      <UniqueIdentifier>{BD7C2AE9-2723-8D4D-B3A0-622CD7E376AC}</UniqueIdentifier>
+      <UniqueIdentifier>{365751F2-8240-0C43-8D10-226ED1475C14}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\object">
-      <UniqueIdentifier>{EC9DF317-A713-FC4E-8E52-A82FDEE59610}</UniqueIdentifier>
+      <UniqueIdentifier>{02413DB6-D37C-D444-981F-9F03366A8AF6}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\physics">
-      <UniqueIdentifier>{56F412AD-F6DB-A449-B22D-012615591120}</UniqueIdentifier>
+      <UniqueIdentifier>{6895F7B6-2C3F-3A46-85AF-A40BB4E40E7B}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\plugin">
-      <UniqueIdentifier>{65412FD6-22DC-3C41-BF49-B5C8F9047F53}</UniqueIdentifier>
+      <UniqueIdentifier>{A0DDBBAB-4AE7-A14D-982A-0C99575AF6CE}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\plugin\define">
-      <UniqueIdentifier>{63F56DB0-9854-8F41-8FC5-3C90989B7307}</UniqueIdentifier>
+      <UniqueIdentifier>{1C847DC2-094E-264E-A370-883764B7905C}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\render">
-      <UniqueIdentifier>{6F4BD3E6-0D1A-2348-964B-F97ABFBDE180}</UniqueIdentifier>
+      <UniqueIdentifier>{2D454CB6-A569-1644-A297-8BD88F829719}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\sound">
-      <UniqueIdentifier>{4A5502F9-CF83-3245-A5B3-7E82CF822AF1}</UniqueIdentifier>
+      <UniqueIdentifier>{C674596A-2F59-0842-80D0-B36301703DCC}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\Scroll\orx\utils">
-      <UniqueIdentifier>{EBBB93F5-4446-454C-BF89-AC36B0B9C67B}</UniqueIdentifier>
+      <UniqueIdentifier>{7DC67C0E-B771-5148-95FE-982E801C6029}</UniqueIdentifier>
     </Filter>
     <Filter Include="data">
-      <UniqueIdentifier>{07034ACC-02C8-0442-B0FC-583393BACE28}</UniqueIdentifier>
+      <UniqueIdentifier>{2181189D-C3D7-AD41-8C7F-32A136853AD6}</UniqueIdentifier>
     </Filter>
     <Filter Include="data\resource">
-      <UniqueIdentifier>{0EF6E7B6-5AE0-D841-98E3-E596BFDE8941}</UniqueIdentifier>
+      <UniqueIdentifier>{E9E93BA7-E8D1-E84D-83B6-91B8E8F22B00}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
