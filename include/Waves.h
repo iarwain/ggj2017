@@ -41,6 +41,8 @@ public:
                 void            DeleteRunTimeObject(const orxSTRING _zObjectName);
                 ScrollObject *  GetRunTimeObject(const orxSTRING _zObjectName) const;
 
+                void            Validate();
+
 
 private:
 
@@ -74,6 +76,7 @@ private:
                 orxU64          mu64InteractionID;
                 orxDOUBLE       mdTime;
                 GameState       meGameState;
+                orxU8           mau8ValidateBuffer[1920 * 1080 * sizeof(orxRGBA)];
 };
 
 #endif // __WAVES_H__

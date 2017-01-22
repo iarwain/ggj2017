@@ -77,18 +77,24 @@ public:
         // Pops config section
         PopConfigSection();
       }
-    }
-    else
-    {
-      // Dropped?
-      if(bIsSelected != orxFALSE)
+      else
       {
-        // Updates status
-        bIsActive   = orxTRUE;
-        bIsSelected = orxFALSE;
+        // Dropped?
+        if(!orxInput_IsActive("Action"))
+        {
+          // Updates status
+          bIsActive = orxTRUE;
+          bIsSelected = orxFALSE;
 
-        // Detaches source from cursor
-        orxObject_Attach(GetOrxObject(), orxNULL);
+          // Detaches source from cursor
+          orxObject_Attach(GetOrxObject(), orxNULL);
+
+          // Adds track
+          AddTrack("T-DropSource");
+
+          // Validates
+          roGame.Validate();
+        }
       }
     }
   }
@@ -167,6 +173,72 @@ orxSTATUS Waves::Save()
 
   // Done!
   return eResult;
+}
+
+void Waves::Validate()
+{
+  orxTEXTURE *pstTexture;
+
+  // Gets validate texture
+  pstTexture = orxTexture_CreateFromFile("ValidateTexture", orxFALSE);
+
+  // Valid?
+  if(pstTexture != orxNULL)
+  {
+    orxBITMAP *pstBitmap;
+
+    // Gets its bitmap
+    pstBitmap = orxTexture_GetBitmap(pstTexture);
+
+    // Valid?
+    if(pstBitmap != orxNULL)
+    {
+      ScrollObject *poLevel;
+      orxU32 u32FailCount = 0, u32Threshold = 100;
+
+      orxDisplay_GetBitmapData(pstBitmap, mau8ValidateBuffer, sizeof(mau8ValidateBuffer));
+
+      // For all red channels
+      for(orxU8 *pu8 = mau8ValidateBuffer; pu8 < mau8ValidateBuffer + sizeof(mau8ValidateBuffer); pu8 += sizeof(orxRGBA))
+      {
+        // Failure?
+        if(*pu8 != 0)
+        {
+          // Updates count
+          u32FailCount++;
+        }
+      }
+
+      // Gets success threshold
+      poLevel = GetRunTimeObject("Level");
+
+      // Valid?
+      if(poLevel != orxNULL)
+      {
+        // Pushes its section
+        poLevel->PushConfigSection();
+
+        // Gets threshold
+        u32Threshold = orxConfig_GetU32("VictoryThreshold");
+
+        // Pops config section
+        poLevel->PopConfigSection();
+      }
+
+      // Success?
+      if(u32FailCount < u32Threshold)
+      {
+        // Activates input
+        orxInput_SetValue("Success", orxFLOAT_1);
+
+        // Creates victory object
+        CreateObject("O-Victory");
+      }
+    }
+
+    // Releases texture
+    orxTexture_Delete(pstTexture);
+  }
 }
 
 void Waves::DeleteRunTimeObject(const orxSTRING _zObjectName)
