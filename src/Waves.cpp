@@ -91,9 +91,6 @@ public:
 
           // Adds track
           AddTrack("T-DropSource");
-
-          // Validates
-          roGame.Validate();
         }
       }
     }
@@ -498,6 +495,13 @@ void Waves::UpdateGame(const orxCLOCK_INFO &_rstInfo)
 
   // Updates input
   UpdateInput(_rstInfo);
+
+  // Validate?
+  if(orxInput_IsActive("Validate") && orxInput_HasNewStatus("Validate"))
+  {
+    // Validates
+    Validate();
+  }
 
   // Success?
   if(orxInput_IsActive("Success") && orxInput_HasNewStatus("Success"))
