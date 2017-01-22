@@ -230,9 +230,6 @@ void Waves::Validate()
       {
         // Activates input
         orxInput_SetValue("Success", orxFLOAT_1);
-
-        // Creates victory object
-        CreateObject("O-Victory");
       }
     }
 
@@ -537,6 +534,9 @@ void Waves::UpdateGame(const orxCLOCK_INFO &_rstInfo)
     // Pops config section
     orxConfig_PopSection();
 
+    // Victory!
+    CreateObject((u32Level == 0) ? "O-LastVictory" : "O-Victory");
+    
     // Saves
     Save();
   }
