@@ -367,12 +367,12 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
         u32ID = orxConfig_GetU32("ID");
 
         // Gets its position
-        poSource->GetPosition(avSourceList[u32ID]);
+        poSource->GetPosition(avSourceList[u32ID], orxTRUE);
         avSourceList[u32ID].fX /= 1920.f;
         avSourceList[u32ID].fY /= 1080.f;
 
-        // Gets its tint
-        orxConfig_GetVector("Tint", &avSourceColorList[u32ID]);
+        // Gets its color
+        orxConfig_GetVector("Color", &avSourceColorList[u32ID]);
 
         // Gets its radius
         afSourceRadiusList[u32ID] = orxConfig_GetFloat("Radius");
