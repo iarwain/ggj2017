@@ -347,8 +347,10 @@ void Waves::UpdateShader(const orxCLOCK_INFO &_rstInfo)
     orxDisplay_GetScreenSize(&vRes.fX, &vRes.fY);
     orxShader_SetVectorParam(pstShader, "Res", 0, &vRes);
 
-    // Level?
-    if(!orxString_Compare(orxShader_GetName(pstShader), "S-Level"))
+    // Level, Lighting or Shadow?
+    if(!orxString_Compare(orxShader_GetName(pstShader), "S-Level")
+    || !orxString_Compare(orxShader_GetName(pstShader), "LightingViewport")
+    || !orxString_Compare(orxShader_GetName(pstShader), "ShadowViewport"))
     {
       ScrollObject *poLevel;
 
