@@ -44,7 +44,7 @@
 
 #ifdef __orxDEBUG__
 
-  #define __orxPROFILER__
+//  #define __orxPROFILER__
 
 #endif /* __orxDEBUG__ */
 

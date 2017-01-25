@@ -22,7 +22,7 @@ endif
 ifeq ($(config),debug32)
   OBJDIR     = obj/x32/Debug
   TARGETDIR  = ../../../bin/mac
-  TARGET     = $(TARGETDIR)/wavesd
+  TARGET     = $(TARGETDIR)/ripplesd
   DEFINES   += -D__orxDEBUG__
   INCLUDES  += -I../../../include -I../../../include/Scroll -I../../../include/Scroll/orx
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -44,7 +44,7 @@ endif
 ifeq ($(config),release32)
   OBJDIR     = obj/x32/Release
   TARGETDIR  = ../../../bin/mac
-  TARGET     = $(TARGETDIR)/waves
+  TARGET     = $(TARGETDIR)/ripples
   DEFINES   +=
   INCLUDES  += -I../../../include -I../../../include/Scroll -I../../../include/Scroll/orx
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -66,7 +66,7 @@ endif
 ifeq ($(config),debug64)
   OBJDIR     = obj/x64/Debug
   TARGETDIR  = ../../../bin/mac
-  TARGET     = $(TARGETDIR)/wavesd
+  TARGET     = $(TARGETDIR)/ripplesd
   DEFINES   += -D__orxDEBUG__
   INCLUDES  += -I../../../include -I../../../include/Scroll -I../../../include/Scroll/orx
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
@@ -88,7 +88,7 @@ endif
 ifeq ($(config),release64)
   OBJDIR     = obj/x64/Release
   TARGETDIR  = ../../../bin/mac
-  TARGET     = $(TARGETDIR)/waves
+  TARGET     = $(TARGETDIR)/ripples
   DEFINES   +=
   INCLUDES  += -I../../../include -I../../../include/Scroll -I../../../include/Scroll/orx
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
