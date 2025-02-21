@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{78CBE4F4-C308-2642-A42F-C32CB4B07FDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{CF4AC125-57DE-4147-BCA9-9C19BBAC53D7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\extensions">
+      <UniqueIdentifier>{C0BCE9EA-C309-B047-9AB9-8C0FAF3112F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\extensions\lz4">
+      <UniqueIdentifier>{6FBDCE5C-2EA8-7D4A-9E81-D451CCAFDCDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\extensions\Scroll">
+      <UniqueIdentifier>{B0B770BF-C943-1047-973D-2860AB1402F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="build">
+      <UniqueIdentifier>{D66E4909-B358-7148-A63E-3CFEA5CBE929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{31543826-6AEE-2949-B1CF-8D48422D39F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\lvl">
+      <UniqueIdentifier>{42E8EE59-CE31-E44D-A433-402C6EA5F378}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\premake4.lua">
+      <Filter>build</Filter>
+    </None>
+    <None Include="..\..\..\data\config\commondev.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\CreationTemplate.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\dev.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\ExtensionTemplate.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\game.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\level.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\objects.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\Ripples.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\Ripplesd.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\Ripplesp.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\SettingsTemplate.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\sound.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\tracks.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\ui.ini">
+      <Filter>config</Filter>
+    </None>
+    <None Include="..\..\..\data\config\lvl\00_Tutorial_1.ini">
+      <Filter>config\lvl</Filter>
+    </None>
+    <None Include="..\..\..\data\config\lvl\01_Tutorial_2.ini">
+      <Filter>config\lvl</Filter>
+    </None>
+    <None Include="..\..\..\data\config\lvl\02_Tutorial_3.ini">
+      <Filter>config\lvl</Filter>
+    </None>
+    <None Include="..\..\..\data\config\lvl\03_Tutorial_4.ini">
+      <Filter>config\lvl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\Ripples.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\orxBundle.h">
+      <Filter>include\extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\orxExtensions.h">
+      <Filter>include\extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\lz4\lz4.h">
+      <Filter>include\extensions\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\lz4\lz4hc.h">
+      <Filter>include\extensions\lz4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\Scroll\Scroll.h">
+      <Filter>include\extensions\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\Scroll\ScrollBase.h">
+      <Filter>include\extensions\Scroll</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\extensions\Scroll\ScrollObject.h">
+      <Filter>include\extensions\Scroll</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\Ripples.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
