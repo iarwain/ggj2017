@@ -624,6 +624,7 @@ void Ripples::Update(const orxCLOCK_INFO &_rstInfo)
       break;
     }
 
+    default:
     case GameStateEnd:
     {
       break;
